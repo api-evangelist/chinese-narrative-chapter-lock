@@ -1,0 +1,36 @@
+generated: '2026-09-05'
+method: derived
+status: candidate
+source: >-
+  Derived from openapi/chinese-narrative-chapter-lock-openapi.json (OpenAPI 3.1.0, fetched live
+  from https://culturebiz-xianxia-lock.onrender.com/openapi.json on 2026-09-05). No official MCP
+  server exists: the provider's site and RapidAPI listing (searched 2026-09-05) mention none, and
+  no MCP endpoint is served on the host.
+deployment:
+  mode: none
+  auth: none
+  verified: derived
+note: >-
+  Candidate tool list only — nobody ships this server. The single substantive operation
+  (POST /v1/lock) is a stateless text-in/structured-terms-out transformation, which would map
+  cleanly onto one MCP tool. Calls direct to the Render host are unauthenticated; the RapidAPI
+  gateway adds key-in-header metering.
+tools:
+  - name: lock_chapter_terms
+    category: terminology
+    description: >-
+      Lock chapter-scoped terminology from pasted Chinese webnovel text: returns locked genre
+      terms (honorifics, ranks, energy vocabulary) with English renderings, title-specific
+      entities (people, sects, skills), a character bible with counts, and a two-column
+      source,target glossary CSV for MT/CAT tools.
+    rest_operation: lock_endpoint_v1_lock_post
+    input_schema_source: '#/components/schemas/LockRequest'
+    inputs:
+      - name: text
+        type: string
+        required: true
+        description: Pasted Chinese narrative (buyer text only)
+  - name: check_health
+    category: operations
+    description: Liveness check for the chapter-lock service.
+    rest_operation: health_health_get

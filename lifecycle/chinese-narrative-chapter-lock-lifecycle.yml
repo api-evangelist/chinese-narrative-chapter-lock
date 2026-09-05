@@ -1,0 +1,21 @@
+generated: '2026-09-05'
+method: derived
+source: >-
+  Derived from openapi/chinese-narrative-chapter-lock-openapi.json and the provider's docs
+  (https://culturebiz-xianxia-lock.onrender.com/docs), searched 2026-09-05.
+versioning:
+  scheme: url-path
+  current: v1
+  info_version: 0.1.0
+  note: Substantive endpoints live under /v1/. The contract self-reports version 0.1.0 — an early-stage API.
+deprecation_policy:
+  published: false
+  note: No deprecation or sunset policy is published; no operations are marked deprecated in the spec.
+deprecated_operations: []
+status_page:
+  published: false
+  note: >-
+    No status page. GET /health ({"status":"ok"}, probed 200 on 2026-09-05) is the only
+    liveness surface; hosting is a Render free-tier-style app fronted by Cloudflare.
+sla:
+  published: false

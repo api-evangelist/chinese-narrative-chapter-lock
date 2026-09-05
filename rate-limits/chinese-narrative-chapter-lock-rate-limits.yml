@@ -1,0 +1,17 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live unauthenticated POST to https://culturebiz-xianxia-lock.onrender.com/v1/lock on
+  2026-09-05 (HTTP 200), plus the docs page and RapidAPI listing (searched same day).
+limit_count: 0
+summary: >-
+  No rate limits are documented on the provider's own docs, and the origin returns no rate-limit
+  signaling headers. Metering happens at the RapidAPI gateway, where plan quotas apply
+  (BASIC/PRO — see plans/), but the per-plan numbers are not machine-readable from the listing.
+observed_headers:
+  rate_limit_headers: []
+  status_on_exhaustion: null
+  note: >-
+    Response headers on a live 200 were infrastructure-only (cloudflare cf-ray/cf-cache-status,
+    Render rndr-id/x-render-origin-server). No X-RateLimit-*, RateLimit-* or Retry-After.
+limits: []

@@ -1,0 +1,31 @@
+generated: '2026-09-05'
+method: probed
+source: live probes of /.well-known/ on the only host the record knows (Render app host)
+summary: >-
+  Nothing is served. Every /.well-known/ path (and /llms.txt and /robots.txt) returns a clean
+  FastAPI JSON 404 ({"detail":"Not Found"}) — a genuine absence, not an SPA-shell false positive.
+  No WellKnown or SecurityTxt pointer is emitted: the probe documents an absence.
+pointer_basis: >-
+  NO WellKnown pointer and NO SecurityTxt pointer — zero of the probed paths returned a document.
+hosts:
+  - host: https://culturebiz-xianxia-lock.onrender.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+      - path: /robots.txt
+        status: 404
+checked: '2026-09-05'

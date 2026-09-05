@@ -1,0 +1,27 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+note: >-
+  The provider runs on a Render platform subdomain (culturebiz-xianxia-lock.onrender.com) and
+  owns no registrable domain of its own. The `domains:` block below (CAA, SPF, DMARC, DNSSEC)
+  therefore describes onrender.com — Render's platform domain, controlled by Render, not by
+  this provider. Only the host-level TLS row is attributable to the provider's deployment.
+hosts:
+- host: culturebiz-xianxia-lock.onrender.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 22 21:54:17 2026 GMT
+  hsts: null
+domains:
+- domain: onrender.com
+  dnssec: false
+  caa:
+  - 0 issue "letsencrypt.org"
+  - 0 issue "pki.goog; cansignhttpexchanges=yes"
+  - 0 issuewild "digicert.com"
+  - 0 issuewild "letsencrypt.org"
+  - 0 issuewild "pki.goog; cansignhttpexchanges=yes"
+  - 0 iodef "mailto:security+caafailure@render.com"
+  spf: false
+  dmarc: true
+  dmarc_policy: none

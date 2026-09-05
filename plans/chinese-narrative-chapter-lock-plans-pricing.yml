@@ -1,0 +1,35 @@
+generated: '2026-09-05'
+method: searched
+source: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock
+pricing_page: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock/pricing
+model: rapidapi-marketplace
+plan_count: 2
+summary: >-
+  Pricing is sold exclusively through the RapidAPI marketplace; the provider's own site links to
+  it as "RapidAPI pricing". The provider-authored listing description states the two tiers below
+  verbatim ("RapidAPI BASIC free · PRO $9.99/mo"). Per-plan request quotas, overage rates, and
+  any ULTRA/MEGA tiers are rendered client-side on the RapidAPI pricing page and were not
+  machine-readable to this crawler (page returns 200 but plan quota data loads via
+  authenticated-session GraphQL), so quotas are recorded as unknown rather than guessed.
+plans:
+  - name: BASIC
+    price: 0
+    currency: USD
+    billing_period: monthly
+    included_quota: null
+    overage: null
+    note: Free tier; quota not machine-readable from the listing.
+  - name: PRO
+    price: 9.99
+    currency: USD
+    billing_period: monthly
+    included_quota: null
+    overage: null
+    note: Stated verbatim in the provider's listing description ("PRO $9.99/mo"); quota not machine-readable.
+evidence:
+  - url: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock
+    status: 200
+    note: og:description carries "RapidAPI BASIC free · PRO $9.99/mo"
+  - url: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock/pricing
+    status: 200
+    note: JS-rendered; plan quotas not present in the static payload

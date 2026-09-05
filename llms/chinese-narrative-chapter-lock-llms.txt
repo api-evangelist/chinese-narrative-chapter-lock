@@ -1,0 +1,28 @@
+# Chinese Narrative Chapter Lock
+
+> Chapter-scoped terminology-locking REST API for CN→EN webnovel (xianxia/cultivation) localization by cultureBiz. POST a pasted Chinese chapter and get back locked genre terms (honorifics, ranks, energy vocabulary), title-specific entities (people, sects, skills), a character bible, and a two-column glossary CSV for downstream MT/CAT tools (DeepL, Crowdin). It is not a machine-translation engine and does not host novels; consistency is per-paste.
+
+The API is served at https://culturebiz-xianxia-lock.onrender.com with a public OpenAPI 3.1.0
+contract at /openapi.json. Calls direct to the Render host are unauthenticated; metered plans
+(BASIC free, PRO $9.99/mo) are sold through RapidAPI, which fronts the API with its own
+key-in-header gateway.
+
+## Docs
+
+- [Docs and examples](https://culturebiz-xianxia-lock.onrender.com/docs): Endpoint reference for POST /v1/lock with a worked Chinese sample and its full JSON response
+- [OpenAPI 3.1.0 contract](https://culturebiz-xianxia-lock.onrender.com/openapi.json): Machine-readable contract, 9 operations, LockRequest schema
+- [Webnovel localization notes](https://culturebiz-xianxia-lock.onrender.com/use/webnovel-loc): Use-case page for webnovel localization
+- [Honorific and rank lock notes](https://culturebiz-xianxia-lock.onrender.com/use/honorific-lock): Use-case page for honorific and rank locking
+
+## API
+
+- [POST /v1/lock](https://culturebiz-xianxia-lock.onrender.com/docs): Body {"text": "<pasted Chinese narrative>"} → locked_terms[] (zh/en/pos), title_entities[] (zh/kind), character_bible[] (zh/kind/count), csv (source,target glossary)
+- [GET /health](https://culturebiz-xianxia-lock.onrender.com/health): Liveness — {"status":"ok"}
+- [GET /v1/metrics](https://culturebiz-xianxia-lock.onrender.com/v1/metrics): Stranger-funnel counters, no PII
+
+## Pricing
+
+- [RapidAPI listing](https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock): Marketplace listing — BASIC free, PRO $9.99/mo
+- [RapidAPI pricing](https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock/pricing): Plan tiers and quotas
+
+<!-- generated: 2026-09-05 | method: generated | source: apis.yml + https://culturebiz-xianxia-lock.onrender.com/docs + /openapi.json (the provider publishes no llms.txt of its own — /llms.txt returned 404 on 2026-09-05) -->

@@ -1,0 +1,63 @@
+generated: '2026-09-05'
+method: derived
+source: >-
+  Derived from openapi/chinese-narrative-chapter-lock-openapi.json plus the published docs page
+  (https://culturebiz-xianxia-lock.onrender.com/docs) and a live probed call to POST /v1/lock on
+  2026-09-05.
+summary: >-
+  A single-endpoint, stateless FastAPI service. POST /v1/lock accepts pasted Chinese text and
+  returns a deterministic terminology-lock structure; nothing is persisted ("does not host
+  novels; consistency is per-paste"). There is therefore no write surface in the
+  state-changing sense: idempotency, reversibility and dry-run are all honestly `na`, not zero.
+authentication:
+  styles: [none]
+  notes: >-
+    Direct calls to the Render host are unauthenticated (probed 200 without credentials,
+    2026-09-05). Metered access is sold through RapidAPI, whose gateway injects its own
+    X-RapidAPI-Key header scheme; the origin OpenAPI declares no securitySchemes.
+  see: authentication/chinese-narrative-chapter-lock-authentication.yml
+versioning:
+  style: url-path
+  current: v1
+  notes: The substantive endpoints live under /v1/ (lock, metrics). info.version is 0.1.0. No deprecation policy is published.
+pagination:
+  supported: false
+  notes: Single-request/response transformation; no collections, no pagination.
+request_tracing:
+  supported: false
+  method: probed
+  notes: >-
+    No request-id header is returned by the origin. Observed response headers on a live 200
+    (2026-09-05) were Cloudflare/Render infrastructure only (cf-ray, rndr-id,
+    x-render-origin-server) — rndr-id/cf-ray are the only correlation identifiers available.
+error_envelope:
+  shape: fastapi-detail
+  see: errors/chinese-narrative-chapter-lock-problem-types.yml
+rate_limit_signaling:
+  headers: []
+  method: probed
+  notes: >-
+    No RateLimit-*/X-RateLimit-*/Retry-After headers on a live 200 from the origin
+    (2026-09-05). Plan quotas are enforced by the RapidAPI gateway, not the origin.
+  see: rate-limits/chinese-narrative-chapter-lock-rate-limits.yml
+idempotency:
+  coverage: na
+  documented: false
+  header: null
+  notes: >-
+    No idempotency-key mechanism is documented and none is needed: the only POST
+    (lock_endpoint_v1_lock_post) is a pure, stateless transformation of the pasted text —
+    it creates no resource, spends no stored quota at the origin, and an identical retry
+    returns the same result (verified against the docs' own precomputed sample, which matched
+    the live response byte-for-byte on 2026-09-05). There is no persisted write surface, so
+    the idempotency dimension is honestly not-applicable rather than zero. Note for metered
+    callers: a retry through RapidAPI does consume a plan request.
+reversibility:
+  grade: na
+  notes: >-
+    No write surface exists to reverse — the API persists nothing ("does not host novels;
+    consistency is per-paste"), so there is no cancel/refund/undo semantics to document.
+    Not-applicable, per the read-only/no-write-surface rule.
+dry_run_mode:
+  grade: na
+  notes: Not applicable for the same reason — every call is already side-effect-free at the origin.

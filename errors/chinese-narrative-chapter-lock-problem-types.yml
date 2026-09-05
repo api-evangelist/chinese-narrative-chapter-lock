@@ -1,0 +1,38 @@
+generated: '2026-09-05'
+method: derived
+format: fastapi-json
+source: >-
+  Derived from the 4xx responses declared in openapi/chinese-narrative-chapter-lock-openapi.json
+  (OpenAPI 3.1.0), confirmed against live responses on 2026-09-05. The API is FastAPI-generated:
+  it does NOT use RFC 9457 application/problem+json. The only declared error status is 422 on
+  POST /v1/lock; unknown paths return the stock FastAPI 404 body (observed live).
+rfc9457: false
+envelope:
+  media_type: application/json
+  default_shape: '{ "detail": [ { "loc": [string|integer, ...], "msg": string, "type": string, "input": any, "ctx": object } ] }'
+  note: >-
+    Standard FastAPI validation envelope: a `detail` array of ValidationError objects. Non-422
+    errors (e.g. 404) return a flat `{"detail": "<message>"}` string body.
+validation_error_shape:
+  schema: HTTPValidationError
+  item_schema: ValidationError
+  fields:
+    - {name: loc, type: array<string|integer>, required: true, description: 'Path to the offending field (e.g. body/text).'}
+    - {name: msg, type: string, required: true, description: Human-readable validation message.}
+    - {name: type, type: string, required: true, description: Machine error type (e.g. missing).}
+    - {name: input, type: any, required: false, description: The rejected input value.}
+    - {name: ctx, type: object, required: false, description: Additional context for the error type.}
+problems:
+  - status: 422
+    title: Unprocessable Entity (Validation Error)
+    media_type: application/json
+    schema: HTTPValidationError
+    operations: [lock_endpoint_v1_lock_post]
+    meaning: >-
+      Request failed validation — the required `text` body field is missing or not a string.
+    remediation: 'Send JSON {"text": "<pasted Chinese narrative>"} with Content-Type application/json.'
+  - status: 404
+    title: Not Found
+    media_type: application/json
+    meaning: 'Unknown path. Body is {"detail":"Not Found"} (observed live 2026-09-05, not declared in the spec).'
+    method: probed

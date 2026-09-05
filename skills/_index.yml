@@ -1,0 +1,12 @@
+generated: '2026-09-05'
+method: generated
+source: >-
+  Packaged Agent Skill generated from openapi/chinese-narrative-chapter-lock-openapi.json
+  and the provider's docs page. Operations verified verbatim in the spec. The provider
+  publishes no skills/AGENTS.md of its own (searched 2026-09-05; the word "skill" on the
+  provider's site refers only to the cultivation-technique entity kind in API output).
+skills:
+  - file: chinese-narrative-chapter-lock-lock-a-chapter.md
+    name: Lock a chapter's terminology for CN→EN webnovel translation
+    api: openapi/chinese-narrative-chapter-lock-openapi.json
+    operations: [lock_endpoint_v1_lock_post, health_health_get]

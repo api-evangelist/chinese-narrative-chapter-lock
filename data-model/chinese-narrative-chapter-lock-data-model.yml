@@ -1,0 +1,42 @@
+generated: '2026-09-05'
+method: derived
+source: >-
+  Derived from openapi/chinese-narrative-chapter-lock-openapi.json (LockRequest schema) and the
+  response-field documentation + worked sample at https://culturebiz-xianxia-lock.onrender.com/docs
+  (the spec types the /v1/lock 200 as an open object; the field shapes below come from the
+  provider's own precomputed sample, which matched a live probed response on 2026-09-05).
+summary: >-
+  One request entity and four response structures. Everything is chapter-scoped and ephemeral —
+  nothing is persisted between calls.
+entities:
+  - name: LockRequest
+    kind: request
+    fields:
+      - {name: text, type: string, required: true, description: Pasted Chinese narrative (buyer text only)}
+  - name: LockedTerm
+    kind: response
+    fields:
+      - {name: zh, type: string, description: Source Chinese term (e.g. 道友)}
+      - {name: en, type: string, description: Locked English rendering (e.g. Fellow Daoist)}
+      - {name: pos, type: string, description: 'Term class: honorific | rank | energy | ...'}
+  - name: TitleEntity
+    kind: response
+    fields:
+      - {name: zh, type: string, description: Title-specific name extracted from the pasted text}
+      - {name: kind, type: string, description: 'Entity kind: person | sect | skill | ...'}
+  - name: CharacterBibleEntry
+    kind: response
+    fields:
+      - {name: zh, type: string}
+      - {name: kind, type: string}
+      - {name: count, type: integer, description: Occurrence count within the pasted chapter}
+  - name: GlossaryCSV
+    kind: response
+    fields:
+      - {name: csv, type: string, description: 'Two-column source,target CSV for MT/CAT tools; title entities pass through untranslated (target = source)'}
+relationships:
+  - {from: LockResponse, to: LockedTerm, type: has_many, via: locked_terms}
+  - {from: LockResponse, to: TitleEntity, type: has_many, via: title_entities}
+  - {from: LockResponse, to: CharacterBibleEntry, type: has_many, via: character_bible}
+  - {from: LockResponse, to: GlossaryCSV, type: has_one, via: csv}
+  - {from: CharacterBibleEntry, to: TitleEntity, type: belongs_to, via: zh, note: character bible aggregates recurring title entities with counts}

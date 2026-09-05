@@ -1,0 +1,64 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for cultureBiz chapter-lock
+  version: 1.0.0
+  x-generated: '2026-09-05'
+  x-method: generated
+  x-source: >-
+    Extends openapi/chinese-narrative-chapter-lock-openapi.json (fetched verbatim from
+    https://culturebiz-xianxia-lock.onrender.com/openapi.json). Adds the server the docs
+    state (the FastAPI-generated contract omits servers[]), tags, and response-field
+    documentation taken from https://culturebiz-xianxia-lock.onrender.com/docs. The
+    original spec is never mutated.
+extends: chinese-narrative-chapter-lock-openapi.json
+actions:
+  - target: $
+    update:
+      servers:
+        - url: https://culturebiz-xianxia-lock.onrender.com
+          description: Production (Render origin; unauthenticated — RapidAPI gateway adds metering)
+      tags:
+        - name: terminology
+          description: Chapter-scoped terminology locking
+        - name: operations
+          description: Health and funnel metrics
+        - name: pages
+          description: HTML landing/docs/use-case pages
+  - target: $.paths['/v1/lock'].post
+    update:
+      tags: [terminology]
+      description: >-
+        Lock chapter-scoped terminology from pasted Chinese narrative (buyer text only).
+        The 200 response object carries: locked_terms[] {zh, en, pos} — genre-convention
+        terms with locked English renderings; title_entities[] {zh, kind} — title-specific
+        people/sects/skills; character_bible[] {zh, kind, count} — recurring entities with
+        occurrence counts; csv — a two-column source,target glossary for MT/CAT tools
+        (title entities pass through untranslated). Documented with a worked sample at /docs.
+  - target: $.paths['/health'].get
+    update:
+      tags: [operations]
+      description: Liveness. Returns {"status":"ok"}.
+  - target: $.paths['/v1/metrics'].get
+    update:
+      tags: [operations]
+      description: Stranger-funnel counters (unique_visitors, trials, api_calls, checkout_starts); no PII.
+  - target: $.paths['/'].get
+    update:
+      tags: [pages]
+  - target: $.paths['/docs'].get
+    update:
+      tags: [pages]
+  - target: $.paths['/use/webnovel-loc'].get
+    update:
+      tags: [pages]
+  - target: $.paths['/use/honorific-lock'].get
+    update:
+      tags: [pages]
+  - target: $.paths['/examples'].get
+    update:
+      tags: [pages]
+      description: 307-redirects to /docs (observed live 2026-09-05).
+  - target: $.paths['/go/rapidapi'].get
+    update:
+      tags: [pages]
+      description: Redirect to the RapidAPI listing, where plans are sold.

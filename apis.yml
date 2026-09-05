@@ -1,14 +1,33 @@
 name: Chinese Narrative Chapter Lock
-description: >-
-  A chapter-scoped terminology-locking REST API for CN→EN webnovel (xianxia/cultivation) localization. It locks genre
-  conventions, honorifics, ranks, sect and character names from pasted buyer text and exports a two-column glossary CSV
-  for downstream MT/CAT tools like DeepL or Crowdin. It is not a full novel MT engine and does not host novels;
-  consistency is per-paste.
+description: A chapter-scoped terminology-locking REST API for CN→EN webnovel (xianxia/cultivation) localization.
+  It locks genre conventions, honorifics, ranks, sect and character names from pasted buyer text and exports a two-column
+  glossary CSV for downstream MT/CAT tools like DeepL or Crowdin. It is not a full novel MT engine and does not
+  host novels; consistency is per-paste.
 url: https://raw.githubusercontent.com/api-evangelist/chinese-narrative-chapter-lock/refs/heads/main/apis.yml
 created: '2026-09-05'
 modified: '2026-09-05'
+image: https://rapidapi-prod-apis.s3.amazonaws.com/4faa5ef5-939d-444c-bfc8-8d868e9bd6de.png
 specificationVersion: '0.21'
 tags:
+- localization
+- translation
+- NLP
+- terminology-management
+- CAT
+- MT-preprocessing
+- chinese-language
+- webnovels
+- publishing
+- entertainment
+apis:
+- name: cultureBiz chapter-lock
+  description: REST API for locking chapter-scoped terminology in Chinese webnovel localization. Core endpoint POST
+    /v1/lock returns locked terms, title entities, a character bible, and a glossary CSV. Documented by a public
+    OpenAPI 3.1.0 contract.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  image: https://rapidapi-prod-apis.s3.amazonaws.com/4faa5ef5-939d-444c-bfc8-8d868e9bd6de.png
+  tags:
   - localization
   - translation
   - NLP
@@ -19,35 +38,52 @@ tags:
   - webnovels
   - publishing
   - entertainment
-apis:
-  - name: cultureBiz chapter-lock
-    description: >-
-      REST API for locking chapter-scoped terminology in Chinese webnovel localization. Core endpoint POST /v1/lock
-      returns locked terms, title entities, a character bible, and a glossary CSV. Documented by a public OpenAPI 3.1.0
-      contract.
-    humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-    baseURL: https://culturebiz-xianxia-lock.onrender.com
-    tags:
-      - localization
-      - translation
-      - NLP
-      - terminology-management
-      - CAT
-      - MT-preprocessing
-      - chinese-language
-      - webnovels
-      - publishing
-      - entertainment
-    properties:
-      - type: OpenAPI
-        url: https://culturebiz-xianxia-lock.onrender.com/openapi.json
-      - type: Documentation
-        url: https://culturebiz-xianxia-lock.onrender.com/docs
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-openapi.json
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: Overlay
+    url: overlays/chinese-narrative-chapter-lock-openapi-overlay.yaml
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+  - type: AgentSkill
+    url: skills/_index.yml
 maintainers:
-  - FN: cultureBiz (zhongzhir)
-    url: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock
-generated:
+- FN: cultureBiz (zhongzhir)
+  url: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock
+x-generated:
   by: apis.io/add
   model: claude-opus-4-8
   confidence: 95
   at: '2026-09-05T07:00:53.781Z'
+common:
+- type: Website
+  url: https://culturebiz-xianxia-lock.onrender.com
+- type: DomainSecurity
+  url: security/chinese-narrative-chapter-lock-domain-security.yml
+- type: LLMsTxt
+  url: llms/chinese-narrative-chapter-lock-llms.txt
+- type: Plans
+  url: plans/chinese-narrative-chapter-lock-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/chinese-narrative-chapter-lock-rate-limits.yml
+- type: Pricing
+  url: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock/pricing
+x-enrichment:
+  date: '2026-09-05'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v3

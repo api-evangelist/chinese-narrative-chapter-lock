@@ -1,0 +1,27 @@
+generated: '2026-09-05'
+method: derived
+source: >-
+  Derived from openapi/chinese-narrative-chapter-lock-openapi.json (which declares NO
+  securitySchemes — derive-authentication.py correctly produced no profile) and confirmed by a
+  live probed call: POST /v1/lock returned 200 with no credentials on 2026-09-05. RapidAPI
+  gateway details from the docs page and the provider's marketplace listing.
+summary: >-
+  Two access paths. (1) Direct to the Render origin: no authentication at all — the OpenAPI
+  declares no securitySchemes and unauthenticated calls succeed. (2) Through the RapidAPI
+  marketplace gateway, which fronts the API with RapidAPI's standard key-in-header scheme and
+  meters requests against the subscribed plan.
+schemes:
+  - style: none
+    surface: https://culturebiz-xianxia-lock.onrender.com
+    verified: probed
+    note: POST /v1/lock answered 200 without credentials (2026-09-05).
+  - style: apiKey
+    surface: RapidAPI gateway (https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock)
+    header: X-RapidAPI-Key
+    verified: searched
+    note: >-
+      RapidAPI's platform-standard header scheme; keys are issued by RapidAPI on subscription,
+      not by the provider. The origin contract itself does not declare it.
+oauth2: false
+openidconnect: false
+mutual_tls: false

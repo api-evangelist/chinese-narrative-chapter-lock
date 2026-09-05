@@ -1,0 +1,38 @@
+generated: '2026-09-05'
+method: derived
+source: >-
+  Derived from openapi/chinese-narrative-chapter-lock-openapi.json and live probes on
+  2026-09-05. Honest negatives are recorded; no domain standard exists for webnovel
+  terminology-locking, so domain_standard_conformance is not asserted (reward-only rule).
+conformance:
+  - id: openapi-3.1
+    conforms: true
+    evidence: >-
+      https://culturebiz-xianxia-lock.onrender.com/openapi.json serves a parsing OpenAPI 3.1.0
+      document (HTTP 200, application/json, 2026-09-05).
+  - id: rfc9457
+    conforms: false
+    evidence: >-
+      Errors are FastAPI application/json detail envelopes, not application/problem+json —
+      see errors/chinese-narrative-chapter-lock-problem-types.yml.
+  - id: oauth2
+    conforms: false
+    evidence: No securitySchemes in the contract; /.well-known/oauth-authorization-server returns 404.
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404 (probed 2026-09-05).
+  - id: pagination
+    conforms: false
+    evidence: Single-request transformation API; no collection endpoints exist.
+  - id: idempotency
+    conforms: false
+    evidence: >-
+      No Idempotency-Key mechanism documented; not applicable in practice — the sole POST is a
+      stateless transformation (see conventions/, idempotency.coverage: na).
+domain_standard:
+  asserted: false
+  note: >-
+    The output CSV is a plain two-column source,target glossary compatible with CAT tool
+    import (DeepL, Crowdin per the provider), but it is not TBX/TMX and the contract declares
+    no localization-industry standard (no TBX, TMX, XLIFF). Recorded as an honest absence,
+    not a penalty — the CSV interchange claim is the provider's own.
