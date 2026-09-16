@@ -9,6 +9,17 @@ modified: '2026-09-05'
 image: https://rapidapi-prod-apis.s3.amazonaws.com/4faa5ef5-939d-444c-bfc8-8d868e9bd6de.png
 specificationVersion: '0.21'
 tags:
+- Localization
+- Translation
+- NLP
+- terminology-management
+- Cat
+- MT-preprocessing
+- chinese-language
+- Web Novels
+- Publishing
+- Entertainment
+tags_raw:
 - localization
 - translation
 - NLP
@@ -20,31 +31,21 @@ tags:
 - publishing
 - entertainment
 apis:
-- name: cultureBiz chapter-lock
-  description: REST API for locking chapter-scoped terminology in Chinese webnovel localization. Core endpoint POST
-    /v1/lock returns locked terms, title entities, a character bible, and a glossary CSV. Documented by a public
-    OpenAPI 3.1.0 contract.
+- aid: >-
+    chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-culturebiz-chapter-lock-api
+  name: Chinese Narrative Chapter Lock CultureBiz Chapter Lock API
+  description: >-
+    The CultureBiz Chapter Lock API from Chinese Narrative Chapter Lock — 1 operation(s) for culturebiz
+    chapter lock.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
   baseURL: https://culturebiz-xianxia-lock.onrender.com
-  image: https://rapidapi-prod-apis.s3.amazonaws.com/4faa5ef5-939d-444c-bfc8-8d868e9bd6de.png
   tags:
-  - localization
-  - translation
-  - NLP
-  - terminology-management
-  - CAT
-  - MT-preprocessing
-  - chinese-language
-  - webnovels
-  - publishing
-  - entertainment
+  - CultureBiz Chapter Lock
   properties:
   - type: OpenAPI
-    url: openapi/chinese-narrative-chapter-lock-openapi.json
+    url: openapi/chinese-narrative-chapter-lock-culturebiz-chapter-lock-api-openapi.yml
   - type: Documentation
     url: https://culturebiz-xianxia-lock.onrender.com/docs
-  - type: Overlay
-    url: overlays/chinese-narrative-chapter-lock-openapi-overlay.yaml
   - type: ErrorCatalog
     url: errors/chinese-narrative-chapter-lock-problem-types.yml
   - type: Conventions
@@ -59,8 +60,188 @@ apis:
     url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
   - type: X-MCPServerCandidate
     url: mcp/chinese-narrative-chapter-lock-mcp.yml
-  - type: AgentSkill
-    url: skills/_index.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-docs-api
+  name: Chinese Narrative Chapter Lock Docs API
+  description: The Docs API from Chinese Narrative Chapter Lock — 1 operation(s) for docs.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Docs
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-docs-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-examples-api
+  name: Chinese Narrative Chapter Lock Examples API
+  description: The Examples API from Chinese Narrative Chapter Lock — 1 operation(s) for examples.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Examples
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-examples-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-go-api
+  name: Chinese Narrative Chapter Lock Go API
+  description: The Go API from Chinese Narrative Chapter Lock — 1 operation(s) for go.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Go
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-go-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-health-api
+  name: Chinese Narrative Chapter Lock Health API
+  description: The Health API from Chinese Narrative Chapter Lock — 1 operation(s) for health.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-health-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-lock-api
+  name: Chinese Narrative Chapter Lock Lock API
+  description: The Lock API from Chinese Narrative Chapter Lock — 1 operation(s) for lock.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Lock
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-lock-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-metrics-api
+  name: Chinese Narrative Chapter Lock Metrics API
+  description: The Metrics API from Chinese Narrative Chapter Lock — 1 operation(s) for metrics.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-metrics-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
+- aid: chinese-narrative-chapter-lock:chinese-narrative-chapter-lock-use-api
+  name: Chinese Narrative Chapter Lock Use API
+  description: The Use API from Chinese Narrative Chapter Lock — 2 operation(s) for use.
+  humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
+  baseURL: https://culturebiz-xianxia-lock.onrender.com
+  tags:
+  - Use
+  properties:
+  - type: OpenAPI
+    url: openapi/chinese-narrative-chapter-lock-use-api-openapi.yml
+  - type: Documentation
+    url: https://culturebiz-xianxia-lock.onrender.com/docs
+  - type: ErrorCatalog
+    url: errors/chinese-narrative-chapter-lock-problem-types.yml
+  - type: Conventions
+    url: conventions/chinese-narrative-chapter-lock-conventions.yml
+  - type: DataModel
+    url: data-model/chinese-narrative-chapter-lock-data-model.yml
+  - type: Authentication
+    url: authentication/chinese-narrative-chapter-lock-authentication.yml
+  - type: Conformance
+    url: conformance/chinese-narrative-chapter-lock-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/chinese-narrative-chapter-lock-lifecycle.yml
+  - type: X-MCPServerCandidate
+    url: mcp/chinese-narrative-chapter-lock-mcp.yml
 maintainers:
 - FN: cultureBiz (zhongzhir)
   url: https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock
@@ -70,6 +251,10 @@ x-generated:
   confidence: 95
   at: '2026-09-05T07:00:53.781Z'
 common:
+- type: Overlay
+  url: overlays/chinese-narrative-chapter-lock-openapi-overlay.yaml
+- type: AgentSkill
+  url: skills/_index.yml
 - type: Website
   url: https://culturebiz-xianxia-lock.onrender.com
 - type: DomainSecurity
