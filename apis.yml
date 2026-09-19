@@ -13,7 +13,7 @@ tags:
 - Translation
 - NLP
 - terminology-management
-- Cat
+- Cats
 - MT-preprocessing
 - chinese-language
 - Web Novels
@@ -92,6 +92,8 @@ apis:
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
   baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
+  - Example
+  tags_raw:
   - Examples
   properties:
   - type: OpenAPI
