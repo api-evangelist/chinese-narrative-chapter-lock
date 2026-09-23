@@ -1,0 +1,23 @@
+openapi: 3.2.0
+info:
+  title: cultureBiz chapter-lock Metrics API
+  description: Chapter lock for people translating or AI-translating Chinese webnovels into English. Locks public-genre conventions and extracts title-specific names from pasted buyer text only. Not a full novel MT engine. Does not host novels.
+  version: 0.1.0
+tags:
+- name: Metrics
+paths:
+  /v1/metrics:
+    get:
+      summary: Metrics Endpoint
+      operationId: metrics_endpoint_v1_metrics_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                type: object
+                title: Response Metrics Endpoint V1 Metrics Get
+      tags:
+      - Metrics

@@ -1,0 +1,51 @@
+{
+  "provider": "chinese-narrative-chapter-lock",
+  "sources": [
+    "_original/chinese-narrative-chapter-lock-openapi.json"
+  ],
+  "outputs": [
+    "chinese-narrative-chapter-lock-culturebiz-chapter-lock-api-openapi.yml",
+    "chinese-narrative-chapter-lock-docs-api-openapi.yml",
+    "chinese-narrative-chapter-lock-examples-api-openapi.yml",
+    "chinese-narrative-chapter-lock-go-api-openapi.yml",
+    "chinese-narrative-chapter-lock-health-api-openapi.yml",
+    "chinese-narrative-chapter-lock-lock-api-openapi.yml",
+    "chinese-narrative-chapter-lock-metrics-api-openapi.yml",
+    "chinese-narrative-chapter-lock-use-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "chinese-narrative-chapter-lock-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET / -> CultureBiz Chapter Lock",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /use/webnovel-loc -> Use",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /use/honorific-lock -> Use",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /docs -> Docs",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /examples -> Examples",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /go/rapidapi -> Go",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /health -> Health",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths GET /v1/metrics -> Metrics",
+    "chinese-narrative-chapter-lock-openapi.json: tagged paths POST /v1/lock -> Lock",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: CultureBiz Chapter Lock",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Docs",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Examples",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Go",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Health",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Lock",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Metrics",
+    "chinese-narrative-chapter-lock-openapi.json: declared missing tag: Use",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "chinese-narrative-chapter-lock-culturebiz-chapter-lock-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-docs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-examples-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-go-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-lock-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-metrics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "chinese-narrative-chapter-lock-use-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}

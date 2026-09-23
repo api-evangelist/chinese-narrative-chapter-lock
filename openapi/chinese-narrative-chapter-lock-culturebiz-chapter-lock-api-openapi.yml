@@ -1,0 +1,21 @@
+openapi: 3.2.0
+info:
+  title: cultureBiz chapter-lock CultureBiz Chapter Lock API
+  description: Chapter lock for people translating or AI-translating Chinese webnovels into English. Locks public-genre conventions and extracts title-specific names from pasted buyer text only. Not a full novel MT engine. Does not host novels.
+  version: 0.1.0
+tags:
+- name: CultureBiz Chapter Lock
+paths:
+  /:
+    get:
+      summary: Landing
+      operationId: landing__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/html:
+              schema:
+                type: string
+      tags:
+      - CultureBiz Chapter Lock
