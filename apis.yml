@@ -38,7 +38,6 @@ apis:
     The CultureBiz Chapter Lock API from Chinese Narrative Chapter Lock — 1 operation(s) for culturebiz
     chapter lock.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - CultureBiz Chapter Lock
   properties:
@@ -64,7 +63,6 @@ apis:
   name: Chinese Narrative Chapter Lock Docs API
   description: The Docs API from Chinese Narrative Chapter Lock — 1 operation(s) for docs.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Docs
   properties:
@@ -90,7 +88,6 @@ apis:
   name: Chinese Narrative Chapter Lock Examples API
   description: The Examples API from Chinese Narrative Chapter Lock — 1 operation(s) for examples.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Example
   tags_raw:
@@ -118,7 +115,6 @@ apis:
   name: Chinese Narrative Chapter Lock Go API
   description: The Go API from Chinese Narrative Chapter Lock — 1 operation(s) for go.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Go
   properties:
@@ -144,7 +140,6 @@ apis:
   name: Chinese Narrative Chapter Lock Health API
   description: The Health API from Chinese Narrative Chapter Lock — 1 operation(s) for health.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Health
   properties:
@@ -170,7 +165,6 @@ apis:
   name: Chinese Narrative Chapter Lock Lock API
   description: The Lock API from Chinese Narrative Chapter Lock — 1 operation(s) for lock.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Lock
   properties:
@@ -196,7 +190,6 @@ apis:
   name: Chinese Narrative Chapter Lock Metrics API
   description: The Metrics API from Chinese Narrative Chapter Lock — 1 operation(s) for metrics.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Metrics
   properties:
@@ -222,7 +215,6 @@ apis:
   name: Chinese Narrative Chapter Lock Use API
   description: The Use API from Chinese Narrative Chapter Lock — 2 operation(s) for use.
   humanURL: https://culturebiz-xianxia-lock.onrender.com/docs
-  baseURL: https://culturebiz-xianxia-lock.onrender.com
   tags:
   - Use
   properties:
