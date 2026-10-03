@@ -44,16 +44,6 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
-    LockRequest:
-      properties:
-        text:
-          type: string
-          title: Text
-          description: Pasted Chinese narrative (buyer text only)
-      type: object
-      required:
-      - text
-      title: LockRequest
     ValidationError:
       properties:
         loc:
@@ -80,3 +70,13 @@ components:
       - msg
       - type
       title: ValidationError
+    LockRequest:
+      properties:
+        text:
+          type: string
+          title: Text
+          description: Pasted Chinese narrative (buyer text only)
+      type: object
+      required:
+      - text
+      title: LockRequest
