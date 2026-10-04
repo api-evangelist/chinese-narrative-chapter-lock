@@ -35,15 +35,16 @@ paths:
       - Lock
 components:
   schemas:
-    HTTPValidationError:
+    LockRequest:
       properties:
-        detail:
-          items:
-            $ref: '#/components/schemas/ValidationError'
-          type: array
-          title: Detail
+        text:
+          type: string
+          title: Text
+          description: Pasted Chinese narrative (buyer text only)
       type: object
-      title: HTTPValidationError
+      required:
+      - text
+      title: LockRequest
     ValidationError:
       properties:
         loc:
@@ -70,13 +71,12 @@ components:
       - msg
       - type
       title: ValidationError
-    LockRequest:
+    HTTPValidationError:
       properties:
-        text:
-          type: string
-          title: Text
-          description: Pasted Chinese narrative (buyer text only)
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
       type: object
-      required:
-      - text
-      title: LockRequest
+      title: HTTPValidationError
