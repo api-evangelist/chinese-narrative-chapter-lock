@@ -11,7 +11,7 @@ specificationVersion: '0.21'
 tags:
 - Localization
 - Translation
-- NLP
+- Natural Language Processing
 - terminology-management
 - Cat
 - MT-preprocessing
