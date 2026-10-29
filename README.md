@@ -1,4 +1,4 @@
-# chinese-narrative-chapter-lock
+# Chinese Narrative Chapter Lock
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,4 +64,116 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-A chapter-scoped terminology-locking REST API for CN→EN webnovel (xianxia/cultivation) localization. It locks genre conventions, honorifics, ranks, sect and character names from pasted buyer text and exports a two-column glossary CSV for downstream MT/CAT tools like DeepL or Crowdin. It is not a ful
+A chapter-scoped terminology-locking REST API for CN→EN webnovel (xianxia/cultivation) localization. It locks genre conventions, honorifics, ranks, sect and character names from pasted buyer text and exports a two-column glossary CSV for downstream MT/CAT tools like DeepL or Crowdin. It is not a full novel MT engine and does not host novels; consistency is per-paste.
+
+**Areas:** Localization · Translation · Natural Language Processing · terminology-management · Cat · MT-preprocessing · chinese-language · Web Novels · Publishing · Entertainment
+
+## Chinese Narrative Chapter Lock on APIs.io
+
+Everything profiled for Chinese Narrative Chapter Lock is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/chinese-narrative-chapter-lock/](https://apis.io/providers/chinese-narrative-chapter-lock/)** — or go straight to one of the APIs or properties below.
+
+### APIs (8)
+
+- [Chinese Narrative Chapter Lock CultureBiz Chapter Lock API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-culturebiz-chapter-lock-api/) — The CultureBiz Chapter Lock API from Chinese Narrative Chapter Lock — 1 operation(s) for culturebiz chapter lock.
+- [Chinese Narrative Chapter Lock Docs API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-docs-api/) — The Docs API from Chinese Narrative Chapter Lock — 1 operation(s) for docs.
+- [Chinese Narrative Chapter Lock Examples API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-examples-api/) — The Examples API from Chinese Narrative Chapter Lock — 1 operation(s) for examples.
+- [Chinese Narrative Chapter Lock Go API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-go-api/) — The Go API from Chinese Narrative Chapter Lock — 1 operation(s) for go.
+- [Chinese Narrative Chapter Lock Health API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-health-api/) — The Health API from Chinese Narrative Chapter Lock — 1 operation(s) for health.
+- [Chinese Narrative Chapter Lock Lock API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-lock-api/) — The Lock API from Chinese Narrative Chapter Lock — 1 operation(s) for lock.
+- [Chinese Narrative Chapter Lock Metrics API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-metrics-api/) — The Metrics API from Chinese Narrative Chapter Lock — 1 operation(s) for metrics.
+- [Chinese Narrative Chapter Lock Use API](https://apis.io/apis/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-use-api/) — The Use API from Chinese Narrative Chapter Lock — 2 operation(s) for use.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [chinese-narrative-chapter-lock-mcp.yml](https://apis.io/servers/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-mcp-yml/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Chinese Narrative Chapter Lock Openapi Overlay](https://apis.io/overlays/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Chinese Narrative Chapter Lock Authentication](https://apis.io/security/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-authentication/)
+- [Chinese Narrative Chapter Lock Domain Security](https://apis.io/security/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Chinese Narrative Chapter Lock Plans Pricing](https://apis.io/plans/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Chinese Narrative Chapter Lock Rate Limits](https://apis.io/rate-limits/chinese-narrative-chapter-lock/chinese-narrative-chapter-lock-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://culturebiz-xianxia-lock.onrender.com)
+- [Pricing](https://rapidapi.com/zhongzhir/api/chinese-narrative-chapter-lock/pricing)
+
+## API Evangelist rating
+
+**Kin Score 24.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.9 |
+| Contract quality | 34.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 18.5 |
+| Access clarity | 31.6 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/chinese-narrative-chapter-lock/](https://apis.io/providers/chinese-narrative-chapter-lock/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Chinese Narrative Chapter Lock: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/chinese-narrative-chapter-lock/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
